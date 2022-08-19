@@ -1,3 +1,3 @@
 # Resto
 
-Don't forget to add virtual env
+Don't forget to make a virtual env
