@@ -8,8 +8,16 @@ First thing first you need to install django 3.2 and also virtual env
    - Make virtual env by using this command:
       ```
       pip install virtualenv
+      
       virtualenv env
       
       env\scripts\activate <!-- For activating virtual env -->
+      
       env\scripts\deactivate <!-- For deactivating virtual env -->
+      ``` 
+
+2. install django 3.2
+   - Install django 3.2 by using this command:
+      ```
+      pip install Django==3.2
       ``` 
