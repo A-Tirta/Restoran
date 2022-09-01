@@ -44,23 +44,18 @@
     <div id="topbar" class="d-flex align-items-center fixed-top">
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-phone d-flex align-items-center"><span>+1 5589 55488 55</span></i>
+          <i class="bi bi-phone d-flex align-items-center"><span>+62 689-4094-20692</span></i>
           <i class="bi bi-clock d-flex align-items-center ms-4"><span> Mon-Sat: 11AM - 23PM</span></i>
         </div>
 
-        <div class="languages d-none d-md-flex align-items-center">
-          <ul>
-            <li>En</li>
-            <li><a href="#">De</a></li>
-          </ul>
-        </div>
+        <div class="languages d-none d-md-flex align-items-center"></div>
       </div>
     </div>
 
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top d-flex align-items-cente">
       <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
-        <h1 class="logo me-auto me-lg-0"><a href="index.html">Restaurantly</a></h1>
+        <h1 class="logo me-auto me-lg-0">Resto GN</h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -73,25 +68,6 @@
             <li><a class="nav-link scrollto" href="#events">Events</a></li>
             <li><a class="nav-link scrollto" href="#chefs">Chefs</a></li>
             <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
-            <li class="dropdown">
-              <a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-              <ul>
-                <li><a href="#">Drop Down 1</a></li>
-                <li class="dropdown">
-                  <a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Drop Down 1</a></li>
-                    <li><a href="#">Deep Drop Down 2</a></li>
-                    <li><a href="#">Deep Drop Down 3</a></li>
-                    <li><a href="#">Deep Drop Down 4</a></li>
-                    <li><a href="#">Deep Drop Down 5</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Drop Down 2</a></li>
-                <li><a href="#">Drop Down 3</a></li>
-                <li><a href="#">Drop Down 4</a></li>
-              </ul>
-            </li>
             <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
@@ -107,7 +83,7 @@
       <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
         <div class="row">
           <div class="col-lg-8">
-            <h1>Welcome to <span>Restaurantly</span></h1>
+            <h1>Welcome to <span>Resto GN</span></h1>
             <h2>Delivering great food for more than 18 years!</h2>
 
             <div class="btns">
@@ -116,7 +92,11 @@
             </div>
           </div>
           <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
-            <a href="https://youtu.be/K0MDWjelrgY" class="glightbox play-btn"></a>
+            <a href="{% static 'assets/vid/review.mp4' %}" class="glightbox play-btn"></a>
+            <!-- 
+              Credit for the video by Snazz
+              <a href= "https://youtu.be/K0MDWjelrgY" class="glightbox play-btn"></a> 
+            -->
           </div>
         </div>
       </div>
@@ -134,7 +114,7 @@
               </div>
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-              <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+              <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
               <p class="fst-italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <ul>
                 <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
@@ -751,12 +731,16 @@
         </div>
 
         <div data-aos="fade-up">
-          <iframe
+          <!-- 
+            Original google maps embed api
+            <iframe
             style="border: 0; width: 100%; height: 350px"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
             frameborder="0"
             allowfullscreen
           ></iframe>
+          -->
+          <iframe style="border: 0; width: 100%; height: 350px" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyArWp7a_ECkl_vs75kwdPNpiVdJXHj9ph0&q=Monumen+Nasional,Seattle+WA" frameborder="0" allowfullscreen></iframe>
         </div>
 
         <div class="container" data-aos="fade-up">
@@ -766,7 +750,7 @@
                 <div class="address">
                   <i class="bi bi-geo-alt"></i>
                   <h4>Location:</h4>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <p>National Monument, Gambir, Central Jakarta City, Jakarta</p>
                 </div>
 
                 <div class="open-hours">
@@ -781,13 +765,13 @@
                 <div class="email">
                   <i class="bi bi-envelope"></i>
                   <h4>Email:</h4>
-                  <p>info@example.com</p>
+                  <p>random@example.com</p>
                 </div>
 
                 <div class="phone">
                   <i class="bi bi-phone"></i>
                   <h4>Call:</h4>
-                  <p>+1 5589 55488 55s</p>
+                  <p>+62 689-4094-20692</p>
                 </div>
               </div>
             </div>
@@ -830,19 +814,19 @@
           <div class="row">
             <div class="col-lg-3 col-md-6">
               <div class="footer-info">
-                <h3>Restaurantly</h3>
+                <h3>Resto GN</h3>
                 <p>
-                  A108 Adam Street <br />
-                  NY 535022, USA<br /><br />
-                  <strong>Phone:</strong> +1 5589 55488 55<br />
-                  <strong>Email:</strong> info@example.com<br />
+                  National Monument<br />
+                  Gambir, Central Jakarta City<br /><br />
+                  <strong>Phone:</strong> +62 689-4094-20692<br />
+                  <strong>Email:</strong> random@example.com<br />
                 </p>
                 <div class="social-links mt-3">
-                  <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                  <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                  <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                  <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                  <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                  <a href="https://twitter.com/home?lang=id" class="twitter"><i class="bx bxl-twitter"></i></a>
+                  <a href="https://id-id.facebook.com/" class="facebook"><i class="bx bxl-facebook"></i></a>
+                  <a href="https://www.instagram.com/?hl=id" class="instagram"><i class="bx bxl-instagram"></i></a>
+                  <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                  <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
                 </div>
               </div>
             </div>
@@ -850,29 +834,20 @@
             <div class="col-lg-2 col-md-6 footer-links">
               <h4>Useful Links</h4>
               <ul>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">404 Not found ehe :P</a></li>
               </ul>
             </div>
 
             <div class="col-lg-3 col-md-6 footer-links">
               <h4>Our Services</h4>
               <ul>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Same goes around here</a></li>
               </ul>
             </div>
 
             <div class="col-lg-4 col-md-6 footer-newsletter">
               <h4>Our Newsletter</h4>
-              <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-              <form action="" method="post"><input type="email" name="email" /><input type="submit" value="Subscribe" /></form>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
             </div>
           </div>
         </div>
@@ -880,7 +855,7 @@
 
       <div class="container">
         <div class="copyright">
-          &copy; Copyright <strong><span>Restaurantly</span></strong
+          &copy; Copyright <strong><span>Group 9</span></strong
           >. All Rights Reserved
         </div>
         <div class="credits">
