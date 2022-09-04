@@ -77,7 +77,53 @@ class BookTableForm(forms.Form):
         'class':'form-control',
         'placeholder':'Message',
         'name':'message',
-        'id':'message'
+        'id':'message',
+        'style': 'background-color: #0c0b09; color: #625b4b; border: 3px solid #625b4b'
+      }
+    )
+  )
+
+class ContactUsForm(forms.Form):
+  Name = forms.CharField(
+    max_length = 255,
+    widget = forms.TextInput(
+      attrs = {
+        'class':'form-control',
+        'placeholder':'Your Name',
+        'name':'name',
+        'id':'name'
+      }
+    )
+  )
+  Email = forms.EmailField(
+    widget = forms.TextInput(
+      attrs = {
+        'class':'form-control',
+        'placeholder':'Your Email',
+        'name':'email',
+        'id':'email'
+      }
+    )
+  )
+  Subject = forms.CharField(
+    max_length = 255,
+    widget = forms.TextInput(
+      attrs = {
+        'class':'form-control',
+        'placeholder':'Subject',
+        'name':'subject',
+        'id':'subject'
+      }
+    )
+  )
+  Message = forms.CharField(
+    widget = forms.Textarea(
+      attrs = {
+        'class':'form-control',
+        'placeholder':'Message',
+        'name':'message',
+        'id':'message',
+        'style': 'background-color: #0c0b09; color: #625b4b; border: 3px solid #625b4b'
       }
     )
   )
