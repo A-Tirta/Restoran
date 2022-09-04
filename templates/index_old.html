@@ -1,0 +1,9 @@
+<h1>LANDING PAGE</h1>
+
+<form method="POST">
+  {% csrf_token %}
+  <table>
+    {{postBookTable}}
+  </table>
+  <button type="submit">Kirim</button>
+</form>

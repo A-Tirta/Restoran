@@ -32,11 +32,24 @@
     <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" />
 
     <!-- =======================================================
-  * Template Name: Restaurantly - v3.8.0
-  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    * Template Name: Restaurantly - v3.8.0
+    * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+
+    <style>
+      input[type='text'],
+      textarea {
+        background-color: #0c0b09;
+        outline: none;
+        border: 3px solid #625b4b;
+      }
+
+      input[type='text']:focus {
+        background-color: #0c0b09;
+      }
+    </style>
   </head>
 
   <body>
@@ -447,7 +460,7 @@
             <p>Book a Table</p>
           </div>
 
-          <form method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+          <form method="post" data-aos="fade-up" data-aos-delay="100">
             {% csrf_token %}
             <div class="row">
               <div class="col-lg-4 col-md-6 form-group">
@@ -478,11 +491,6 @@
             <div class="form-group mt-3">
               {{postBookTable.Message}}
               <!-- <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea> -->
-            </div>
-            <div class="mb-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
             </div>
             <div class="text-center"><button type="submit">Book a Table</button></div>
           </form>
@@ -778,25 +786,25 @@
             </div>
 
             <div class="col-lg-8 mt-5 mt-lg-0">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <form method="post">
+                {% csrf_token %}
                 <div class="row">
                   <div class="col-md-6 form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required />
+                    {{postContactUs.Name}}
+                    <!-- <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required /> -->
                   </div>
                   <div class="col-md-6 form-group mt-3 mt-md-0">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required />
+                    {{postContactUs.Email}}
+                    <!-- <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required /> -->
                   </div>
                 </div>
                 <div class="form-group mt-3">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required />
+                  {{postContactUs.Subject}}
+                  <!-- <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required /> -->
                 </div>
                 <div class="form-group mt-3">
-                  <textarea class="form-control" name="message" rows="8" placeholder="Message" required></textarea>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  {{postContactUs.Message}}
+                  <!-- <textarea class="form-control" name="message" rows="8" placeholder="Message" required></textarea> -->
                 </div>
                 <div class="text-center"><button type="submit">Send Message</button></div>
               </form>
