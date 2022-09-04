@@ -11,3 +11,9 @@ class BookTable(models.Model):
   Time = models.CharField(max_length=50)
   ManyPeople = models.CharField(max_length=100)
   Message = models.TextField()
+
+class ContactUs(models.Model):
+  Name = models.CharField(max_length=255)
+  Email = models.EmailField()
+  Subject = models.CharField(max_length=255)
+  Message = models.TextField()
