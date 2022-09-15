@@ -14,12 +14,17 @@ def index(request):
   postContactUs = ContactUsForm()
   postBookTable = BookTableForm()
 
+  formBookTable = BookTableForm(request.POST or None)
+  formContactUs = ContactUsForm(request.POST or None)
+
   context = {
     'postBookTable' : postBookTable,
-    'postContactUs' : postContactUs
+    'postContactUs' : postContactUs,
+    'formBookTable' : formBookTable,
+    'formContactUs' : formContactUs
   }
-
-  if request.method == 'POST':
+  
+  if 'BookTable' in request.POST:
     BookTable.objects.create(
     Name = request.POST["Name"],
     Email = request.POST["Email"],
@@ -28,6 +33,13 @@ def index(request):
     Time = request.POST["Time"],
     ManyPeople = request.POST["ManyPeople"],
     Message = request.POST["Message"]
+  )
+  elif 'ContactUs' in request.POST:
+    ContactUs.objects.create(
+    CUName = request.POST["CUName"],
+    CUEmail = request.POST["CUEmail"],
+    CUSubject = request.POST["CUSubject"],
+    CUMessage = request.POST["CUMessage"]
   )
 
     return HttpResponseRedirect("/home/")
