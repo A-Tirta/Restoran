@@ -34,14 +34,15 @@ def index(request):
     ManyPeople = request.POST["ManyPeople"],
     Message = request.POST["Message"]
   )
-  elif 'ContactUs' in request.POST:
+    return HttpResponseRedirect("/home/")
+
+  if 'ContactUs' in request.POST:
     ContactUs.objects.create(
     CUName = request.POST["CUName"],
     CUEmail = request.POST["CUEmail"],
     CUSubject = request.POST["CUSubject"],
     CUMessage = request.POST["CUMessage"]
   )
-
     return HttpResponseRedirect("/home/")
 
   return render(request, 'index.html', context)
