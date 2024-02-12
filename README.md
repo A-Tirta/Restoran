@@ -25,5 +25,5 @@ First thing first you need to install django 3.2 and also virtual env
 2. install pymsql
    - Install pymsql by using this command:
       ```
-      pip install mysqlclient pymysql <!-- pymsql for connecting django project to xampp -->
+      pip install mysqlclient pymysql <!-- for connecting django project to mysql -->
       ``` 
